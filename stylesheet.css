@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap'); /*font-family: 'Montserrat', sans-serif;*/
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+.stack{
+    padding: 10em;
+    overflow: auto;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-template-areas: "a a"; */
+    /* grid-auto-rows: 500px; */
+    align-items: stretch;
+    object-fit: cover;
+    padding: 1em;
+    gap: 1em;
+}
+
+.nested{
+    display: grid;
+    background: #eee;
+    grid-template-columns: repeat(2, 20% 80%);
+    grid-auto-rows: 80%;
+    border: 1px solid #ccc;
+    padding: 1em;
+}
+.text{
+    padding: 20px 20px;
+}
+.text > h3{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #177FAD;
+    font-size: 20px;
+}
+
+.text > p{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+.text > button{
+    background: rgb(61, 56, 56);
+    border: 0;
+    color: white;
+    padding: 10px;
+    width: 100px;
+}
+.text > button::after{
+    color:white;
+}
+
+.image{
+    max-width: 75%;
+    max-height: 25%;
+    min-width: 0%;
+    min-height: 0%;
+    border: white;
+    grid-auto-rows: 70px;
+}
