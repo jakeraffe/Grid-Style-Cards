@@ -2,8 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap'); /*font-family: 'Montserrat', sans-serif;*/
 @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
 
+/* .main-page{
+    /* background-color: #292929; */
+} */
 .stack{
-    padding: 10em;
+    padding: 2em;
     overflow: auto;
 }
 
@@ -20,20 +23,27 @@
 
 .nested{
     display: grid;
-    background: #eee;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+    background: rgb(238, 232, 232);
     grid-template-columns: repeat(2, 20% 80%);
     grid-auto-rows: 80%;
     border: 1px solid #ccc;
-    padding: 1em;
+    margin: .1rem;
+}
+.nested:hover{
+    box-shadow: 0 1px 0px 0px rgba(0,0,0,0.2);
 }
 .text{
-    padding: 20px 20px;
+    padding: 20px 15px;
 }
 .text > h3{
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     color: #177FAD;
     font-size: 20px;
+    padding: 9px;
+    border-bottom: 1px solid #dfdfdf;
 }
 
 .text > p{
@@ -42,17 +52,21 @@
     font-size: 18px;
 }
 
-.text > button{
-    background: rgb(61, 56, 56);
-    border: 0;
-    color: white;
+.request-button{
+    background: white;
+    border: 10px;
+    color: black;
     padding: 10px;
     width: 100px;
 }
-.text > button::after{
-    color:white;
-}
 
+/* .request-button:focus{
+    
+} */
+.request-button:hover{
+    background-color: black;
+    color: white;
+}
 .image{
     max-width: 75%;
     max-height: 25%;
@@ -60,4 +74,5 @@
     min-height: 0%;
     border: white;
     grid-auto-rows: 70px;
+    padding: 1em;
 }
