@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap'); /*font-family: 'Montserrat', sans-serif;*/
 @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
 
-/* .main-page{
-    /* background-color: #292929; */
-} */
+.main-page{
+     /* background-color: #505050 */
+     background-color: #eee;
+}
 .stack{
     padding: 2em;
     overflow: auto;
@@ -12,7 +13,8 @@
 
 .grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* grid-template-rows: minmax(350px, 1fr); */
     /* grid-template-areas: "a a"; */
     /* grid-auto-rows: 500px; */
     align-items: stretch;
@@ -25,8 +27,8 @@
     display: grid;
     border-radius: 6px;
     box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
-    background: rgb(238, 232, 232);
-    grid-template-columns: repeat(2, 20% 80%);
+    background: rgba(236, 236, 241, 0.712);
+    grid-template-columns: repeat(2, 15% 80%);
     grid-auto-rows: 80%;
     border: 1px solid #ccc;
     margin: .1rem;
@@ -35,21 +37,21 @@
     box-shadow: 0 1px 0px 0px rgba(0,0,0,0.2);
 }
 .text{
-    padding: 20px 15px;
+    padding: 1px 2px 15px 15px;
 }
 .text > h3{
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     color: #177FAD;
     font-size: 20px;
-    padding: 9px;
+    padding: 10px;
     border-bottom: 1px solid #dfdfdf;
 }
 
 .text > p{
     font-family: 'Montserrat', sans-serif;
     color: rgb(0, 0, 0);
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .request-button{
