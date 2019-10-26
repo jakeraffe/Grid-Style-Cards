@@ -26,6 +26,7 @@ const softwareData = [
   ];
 
  function softTemplate(item) {
+   var desc = `${item.description}`
     return `
       <card class="nested">
         <img class="image" src="${item.icon}">
