@@ -23,10 +23,30 @@ const softwareData = [
         system that can work in conjunctio",
         icon: "Assets/avaya.png"
       },
+      {
+        title: "Visual Studio Code",
+        description: "Microsoft Visual Studio is an integrated development environment from Microsoft. \
+        It is used to develop computer programs, as well as websites, web apps, web services and mobile apps",
+        icon: "Assets/vscode.png"
+      },
+      {
+        title: "Visual Studio Code",
+        description: "Microsoft Visual Studio is an integrated development environment from Microsoft. \
+        It is used to develop computer programs, as well as websites, web apps, web services and mobile apps",
+        icon: "Assets/vscode.png"
+      },
+      {
+        title: "Visual Studio Code",
+        description: "Microsoft Visual Studio is an integrated development environment from Microsoft. \
+        It is used to develop computer programs, as well as websites, web apps, web services and mobile apps",
+        icon: "Assets/vscode.png"
+      }
   ];
 
+//  function getDescription(){
+//   var desc = split(`${item.description}`, " ");
+//  }
  function softTemplate(item) {
-   var desc = `${item.description}`
     return `
       <card class="nested">
         <img class="image" src="${item.icon}">
