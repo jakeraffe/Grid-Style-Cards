@@ -1,45 +1,39 @@
 const softwareData = [
     {
-      title: "Adobe Acrobat DC",
-      description: "Microsoft Visual Studio is an integrated development environment from Microsoft. \
-It is used to develop computer programs, as well as websites, web apps, web services and mobile apps",
-      icon: "Assets/adobe.png"
+      title: "Microsoft Azure",
+      description: "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing\
+applications and services through Microsoft-managed data centers.",
+      icon: "Assets/azure.png"
     },
-    {
+      {
+        title: "Visual Studio Code",
+        description: "Visual Studio Code is a source-code editor developed by Microsoft for Windows, Linux and macOS. It includes support \
+for debugging, embedded Git control and GitHub, and code refactoring.",
+        icon: "Assets/vscode.png"
+      },
+      {
         title: "Visual Studio",
-        description: "Avaya Equinox for Windows turns your Windows PC into a powerful communications and collaboration \
-system that can work in conjunction",
+        description: "Microsoft Visual Studio is an integrated development environment from Microsoft. \
+It is used to develop computer programs, as well as websites, web apps, web services and mobile apps.",
         icon: "Assets/vs.png"
       },
       {
-        title: "Visual Studio Code",
-        description: "Microsoft Visual Studio is an integrated development environment from Microsoft. It is used to develop computer programs, \
-as well as websites, web apps, web services and mobile apps",
-        icon: "Assets/vscode.png"
+        title: "Docker",
+        description: "Docker is a set of platform-as-a-service products that use OS-level virtualization to deliver software\
+in packages or containers. Containers are isolated from one another and bundle their own software.",
+        icon: "Assets/docker1.png"
       },
       {
-        title: "Bananatag",
-        description: "Avaya Equinox for Windows turns your Windows PC into a powerful communications and collaboration \
-system that can work in conjunctio",
-        icon: "Assets/avaya.png"
+        title: "Kubernetes",
+        description: "Kubernetes is an open-source container-orchestration system for automating application deployment, scaling, \
+and management. It is now maintained by the Cloud Native Computing Foundation.",
+        icon: "Assets/kuber2.png"
       },
       {
-        title: "Visual Studio Code",
-        description: "Microsoft Visual Studio is an integrated development environment from Microsoft. \
-It is used to develop computer programs, as well as websites, web apps, web services and mobile apps",
-        icon: "Assets/vscode.png"
-      },
-      {
-        title: "Visual Studio Code",
-        description: "Microsoft Visual Studio is an integrated development environment from Microsoft. It is used to develop computer programs, \
-as well as websites, web apps, web services and mobile apps",
-        icon: "Assets/vscode.png"
-      },
-      {
-        title: "Visual Studio Code",
-        description: "Microsoft Visual Studio is an integrated development environment from Microsoft. \
-It is used to develop computer programs, as well as websites, web apps, web services and mobile apps",
-        icon: "Assets/vscode.png"
+        title: "SQL Server",
+        description: "Microsoft SQL Server is a relational database management system developed by Microsoft. It is a software \
+product with the primary function of storing and retrieving data as requested by other software applications",
+        icon: "Assets/sql.png"
       }
   ];
 
