@@ -44,7 +44,7 @@
     color: #177FAD;
     font-size: 20px;
     padding: 10px;
-    border-bottom: 1px solid #dfdfdf;
+    /* border-bottom: 1px solid #dfdfdf; */
 }
 
 .text > p{
