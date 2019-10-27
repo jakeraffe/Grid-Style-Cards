@@ -75,12 +75,24 @@
 }
 
 .readmore{
-    background-color: #000000;
-    border: 2px solid #fff;
-    color: #fff;
-    letter-spacing: 1px;
-    margin: 0;
+    background: snow;
+    border-color: black;
+    color: black;
     padding: 10px;
+    width: 100px;
+    /*border-radius: 3px;*/
+}
+
+.readmore:focus{
+    border-color: rgb(85, 85, 165);
+}
+.readmore:hover{
+    background-color: black;
+    color: white;
+    transition: all .3s ease;
+}
+.readmore:active{
+    top: 2px;
 }
 
 
