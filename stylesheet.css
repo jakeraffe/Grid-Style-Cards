@@ -27,7 +27,7 @@
     display: grid;
     border-radius: 6px;
     box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
-    background: rgba(236, 236, 241, 0.712);
+    background: snow;
     grid-template-columns: repeat(2, 15% 80%);
     grid-auto-rows: 80%;
     border: 1px solid #ccc;
@@ -55,7 +55,7 @@
 }
 
 .request-button{
-    background: white;
+    background: snow;
     border: 10px;
     color: black;
     padding: 10px;
