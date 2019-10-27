@@ -1,4 +1,4 @@
-# webTemplate
+# Web CSS Card Template
 A website with a reusable and modular design.
 
 Heavy on Javascript and CSS with the use of JS Template Literals and CSS Grids.
