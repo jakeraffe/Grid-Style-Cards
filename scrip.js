@@ -41,6 +41,7 @@ const softwareData = [
 
  function getDescription(desc){
   var newDesc = desc.split(" ");
+  newDesc.join(' ');
   alert(newDesc);
  }
  function softTemplate(item) {
