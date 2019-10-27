@@ -19,33 +19,30 @@ const softwareData = [
       },
       {
         title: "Bananatag",
-        description: "Avaya Equinox for Windows turns your Windows PC into a powerful communications and collaboration\
-        system that can work in conjunctio",
+        description: "Avaya Equinox for Windows turns your Windows PC into a powerful communications and collaboration system that can work in conjunctio",
         icon: "Assets/avaya.png"
       },
       {
         title: "Visual Studio Code",
-        description: "Microsoft Visual Studio is an integrated development environment from Microsoft. \
-        It is used to develop computer programs, as well as websites, web apps, web services and mobile apps",
+        description: "Microsoft Visual Studio is an integrated development environment from Microsoft. It is used to develop computer programs, as well as websites, web apps, web services and mobile apps",
         icon: "Assets/vscode.png"
       },
       {
         title: "Visual Studio Code",
-        description: "Microsoft Visual Studio is an integrated development environment from Microsoft. \
-        It is used to develop computer programs, as well as websites, web apps, web services and mobile apps",
+        description: "Microsoft Visual Studio is an integrated development environment from Microsoft. It is used to develop computer programs, as well as websites, web apps, web services and mobile apps",
         icon: "Assets/vscode.png"
       },
       {
         title: "Visual Studio Code",
-        description: "Microsoft Visual Studio is an integrated development environment from Microsoft. \
-        It is used to develop computer programs, as well as websites, web apps, web services and mobile apps",
+        description: "Microsoft Visual Studio is an integrated development environment from Microsoft. It is used to develop computer programs, as well as websites, web apps, web services and mobile apps",
         icon: "Assets/vscode.png"
       }
   ];
 
-//  function getDescription(){
-//   var desc = split(`${item.description}`, " ");
-//  }
+ function getDescription(desc){
+  var newDesc = desc.split(" ");
+  alert(newDesc);
+ }
  function softTemplate(item) {
     return `
       <card class="nested">
@@ -53,7 +50,7 @@ const softwareData = [
           <div class="text">
           <h3>${item.title}</h3>
           <p>${item.description}</p>
-          <button class="request-button">Request</button>
+          <button class="request-button" onclick="getDescription('${item.description}')">Request</button>
         </div>
       </card>
     `;
