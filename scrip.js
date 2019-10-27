@@ -38,7 +38,7 @@ product with the primary function of storing and retrieving data as requested by
   ];
 
   
-
+// Function to read more and restrict text length on each card
   function getDesc(itemDesc){
     let desc = itemDesc.description;
 
@@ -53,6 +53,9 @@ product with the primary function of storing and retrieving data as requested by
       // alert(secondHalf);
   }
 
+  // completes the rest of the structure of the cards
+  // "item" is the literal object array that has been passed into our function.
+  //  This loops through and displays as we ask it to.
   function softTemplate(item) {
     return `
       <card class="nested">
@@ -67,6 +70,8 @@ product with the primary function of storing and retrieving data as requested by
     `;
   }
 
+// This allows the http div to use the app class.
+// Sets up the structure of the page and sends our Template Literal to two functions for work.
   document.getElementById("app").innerHTML = `
   <div class="stack">
     <main class="grid">
