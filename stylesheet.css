@@ -2,16 +2,18 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap'); /*font-family: 'Montserrat', sans-serif;*/
 @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
 
+.main-page{
+     /* background-color: #505050 */
+     background-color: #eee;
+}
 .stack{
-    padding: 10em;
+    padding: 2em;
     overflow: auto;
 }
 
 .grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* grid-template-areas: "a a"; */
-    /* grid-auto-rows: 500px; */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     align-items: stretch;
     object-fit: cover;
     padding: 1em;
@@ -20,44 +22,86 @@
 
 .nested{
     display: grid;
-    background: #eee;
-    grid-template-columns: repeat(2, 20% 80%);
+    grid-template-columns: repeat(3, 17% 77%);
+    /* grid-template-areas: "sidebar main main"; */
+    grid-template-rows: repeat(3, 120px);
+    border-radius: 6px;
+    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+    background: snow;
     grid-auto-rows: 80%;
     border: 1px solid #ccc;
-    padding: 1em;
+    margin: .1rem;
+}
+.nested:hover{
+    box-shadow: 0 1px 0px 0px rgba(0,0,0,0.2);
 }
 .text{
-    padding: 20px 20px;
+    padding: 1px 2px 15px 15px;
 }
 .text > h3{
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     color: #177FAD;
     font-size: 20px;
+    padding: 10px;
+    /* border-bottom: 1px solid #dfdfdf; */
 }
 
 .text > p{
     font-family: 'Montserrat', sans-serif;
     color: rgb(0, 0, 0);
-    font-size: 18px;
+    font-size: 15px;
 }
 
-.text > button{
-    background: rgb(61, 56, 56);
-    border: 0;
-    color: white;
+.request-button{
+    background: snow;
+    border-color: black;
+    color: black;
     padding: 10px;
     width: 100px;
-}
-.text > button::after{
-    color:white;
+    /*border-radius: 3px;*/
 }
 
+.request-button:focus{
+    border-color: rgb(85, 85, 165);
+}
+.request-button:hover{
+    background-color: black;
+    color: white;
+    transition: all .3s ease;
+}
+.request-button:active{
+    top: 2px;
+}
+
+.readmore{
+    background: snow;
+    border-color: black;
+    color: black;
+    padding: 10px;
+    width: 100px;
+    /*border-radius: 3px;*/
+}
+
+.readmore:focus{
+    border-color: rgb(85, 85, 165);
+}
+.readmore:hover{
+    background-color: black;
+    color: white;
+    transition: all .3s ease;
+}
+.readmore:active{
+    top: 2px;
+}
+
+
 .image{
-    max-width: 75%;
-    max-height: 25%;
+    max-width: 100%;
+    max-height: 42%;
     min-width: 0%;
     min-height: 0%;
     border: white;
     grid-auto-rows: 70px;
+    padding: 1em;
 }
