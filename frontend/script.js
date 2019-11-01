@@ -1,3 +1,4 @@
+
 const softwareData = [
     {
       title: "Microsoft Azure",
@@ -53,6 +54,7 @@ product with the primary function of storing and retrieving data as requested by
       // alert(secondHalf);
   }
 
+  
   // completes the rest of the structure of the cards
   // "item" is the literal object array that has been passed into our function.
   //  This loops through and displays as we ask it to.
