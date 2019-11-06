@@ -82,3 +82,17 @@ product with the primary function of storing and retrieving data as requested by
     </main>
   </div>
   `;
+
+
+
+//sorts everything perfectly
+// function sorting(){
+  var sortByProperty = function (property) {
+    return function (x, y) {
+        return ((x[property] === y[property]) ? 0 : ((x[property] > y[property]) ? 1 : -1));
+    };
+  };
+// }
+
+// let demoSort = softwareData.sort(sortByProperty('title'));
+  // return console.log(demoSort);
