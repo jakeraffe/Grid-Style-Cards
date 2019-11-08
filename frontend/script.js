@@ -1,5 +1,33 @@
 
-const softwareData = [
+const approved_Office_Software = [
+      {
+        title: "Docker",
+        description: "Docker is a set of platform-as-a-service products that use OS-level virtualization to deliver software\
+in packages or containers. Containers are isolated from one another and bundle their own software.",
+        icon: "Assets/docker1.png"
+      },
+      {
+        title: "Kubernetes",
+        description: "Kubernetes is an open-source container-orchestration system for automating application deployment, scaling, \
+and management. It is now maintained by the Cloud Native Computing Foundation.",
+        icon: "Assets/kuber2.png"
+      },
+      {
+        title: "SQL Server",
+        description: "Microsoft SQL Server is a relational database management system developed by Microsoft. It is a software \
+product with the primary function of storing and retrieving data as requested by other software applications",
+        icon: "Assets/sql.png"
+      },
+      {
+        title: "Goto Meeting",
+        description: "Microsoft SQL Server is a relational database management system developed by Microsoft. It is a software \
+product with the primary function of storing and retrieving data as requested by other software applications",
+        icon: "Assets/GoTo.png"
+      }
+  ];
+
+
+  const approved_Engineering_Software = [
     {
       title: "Microsoft Azure",
       description: "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing\
@@ -18,27 +46,19 @@ for debugging, embedded Git control and GitHub, and code refactoring.",
 It is used to develop computer programs, as well as websites, web apps, web services and mobile apps.",
         icon: "Assets/vs.png"
       },
-      {
-        title: "Docker",
-        description: "Docker is a set of platform-as-a-service products that use OS-level virtualization to deliver software\
-in packages or containers. Containers are isolated from one another and bundle their own software.",
-        icon: "Assets/docker1.png"
-      },
-      {
-        title: "Kubernetes",
-        description: "Kubernetes is an open-source container-orchestration system for automating application deployment, scaling, \
-and management. It is now maintained by the Cloud Native Computing Foundation.",
-        icon: "Assets/kuber2.png"
-      },
-      {
-        title: "SQL Server",
-        description: "Microsoft SQL Server is a relational database management system developed by Microsoft. It is a software \
-product with the primary function of storing and retrieving data as requested by other software applications",
-        icon: "Assets/sql.png"
-      }
-  ];
-
+  ]
   
+  
+//sorts everything perfectly
+  var sortByProperty = function (property) {
+    return function (x, y) {
+        //basically returns nothing if they are equal,
+        //or returns the item that is greater than the lesser
+        return ((x[property] === y[property]) ? 0 : ((x[property] > y[property]) ? 1 : -1));
+    };
+  };
+
+
 // Function to read more and restrict text length on each card
   function getDesc(itemDesc){
     let desc = itemDesc.description;
@@ -66,19 +86,21 @@ product with the primary function of storing and retrieving data as requested by
             <!--<button class="request-button" onclick="getDescription('${item.description}')">Request</button> -->
             <h3>${item.title}</h3>
             <p>${item.description}</p>
-            <button class="readmore" onclick="getDesc()">Read More</button>
+            <button class="request-button" onclick="getDesc()">Request</button>
         </div>
       </card>
     `;
   }
 
+
+let sorted_Office_List = approved_Office_Software.sort(sortByProperty('title'));
 // This allows the http div to use the app class.
 // Sets up the structure of the page and sends our Template Literal to two functions for work.
   document.getElementById("app").innerHTML = `
   <div class="stack">
     <main class="grid">
-      ${softwareData.map(getDesc).join("")}
-      ${softwareData.map(softTemplate).join("")}
+      ${sorted_Office_List.map(getDesc).join("")}
+      ${sorted_Office_List.map(softTemplate).join("")}
     </main>
   </div>
   `;
