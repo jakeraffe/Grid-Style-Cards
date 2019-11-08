@@ -1,52 +1,71 @@
 
+const main_Category_View = [
+  {
+    title: "Wooodward",
+    description: "Apps build by Woodward specifically for Woodward",
+    icon: "Assets/docker1.png"
+  },
+  {
+    title: "Office",
+    description: "General purpose office applications e.g Microsoft Office, Excel, Powerpoint, Visio etc",
+    icon: "Assets/docker1.png"
+  },
+  {
+    title: "Engineering",
+    description: "From Autocad to something else that ill write in later, all your Enginerring Software is found here",
+    icon: "Assets/docker1.png"
+  }
+];
+
+
 const approved_Office_Software = [
-      {
-        title: "Docker",
-        description: "Docker is a set of platform-as-a-service products that use OS-level virtualization to deliver software\
+  {
+    title: "Docker",
+    description: "Docker is a set of platform-as-a-service products that use OS-level virtualization to deliver software\
 in packages or containers. Containers are isolated from one another and bundle their own software.",
-        icon: "Assets/docker1.png"
-      },
-      {
-        title: "Kubernetes",
-        description: "Kubernetes is an open-source container-orchestration system for automating application deployment, scaling, \
+    icon: "Assets/docker1.png"
+  },
+  {
+    title: "Kubernetes",
+    description: "Kubernetes is an open-source container-orchestration system for automating application deployment, scaling, \
 and management. It is now maintained by the Cloud Native Computing Foundation.",
-        icon: "Assets/kuber2.png"
-      },
-      {
-        title: "SQL Server",
-        description: "Microsoft SQL Server is a relational database management system developed by Microsoft. It is a software \
+    icon: "Assets/kuber2.png"
+  },
+  {
+    title: "SQL Server",
+    description: "Microsoft SQL Server is a relational database management system developed by Microsoft. It is a software \
 product with the primary function of storing and retrieving data as requested by other software applications",
-        icon: "Assets/sql.png"
-      },
-      {
-        title: "Goto Meeting",
-        description: "Microsoft SQL Server is a relational database management system developed by Microsoft. It is a software \
+    icon: "Assets/sql.png"
+  },
+  {
+    title: "Goto Meeting",
+    description: "Microsoft SQL Server is a relational database management system developed by Microsoft. It is a software \
 product with the primary function of storing and retrieving data as requested by other software applications",
-        icon: "Assets/GoTo.png"
-      }
-  ];
+    icon: "Assets/GoTo.png"
+  }
+];
 
 
-  const approved_Engineering_Software = [
-    {
-      title: "Microsoft Azure",
-      description: "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing\
+const approved_Engineering_Software = [
+{
+  title: "Microsoft Azure",
+  description: "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing\
 applications and services through Microsoft-managed data centers.",
-      icon: "Assets/azure.png"
-    },
-      {
-        title: "Visual Studio Code",
-        description: "Visual Studio Code is a source-code editor developed by Microsoft for Windows, Linux and macOS. It includes support \
+  icon: "Assets/azure.png"
+},
+  {
+    title: "Visual Studio Code",
+    description: "Visual Studio Code is a source-code editor developed by Microsoft for Windows, Linux and macOS. It includes support \
 for debugging, embedded Git control and GitHub, and code refactoring.",
-        icon: "Assets/vscode.png"
-      },
-      {
-        title: "Visual Studio",
-        description: "Microsoft Visual Studio is an integrated development environment from Microsoft. \
+    icon: "Assets/vscode.png"
+  },
+  {
+    title: "Visual Studio",
+    description: "Microsoft Visual Studio is an integrated development environment from Microsoft. \
 It is used to develop computer programs, as well as websites, web apps, web services and mobile apps.",
-        icon: "Assets/vs.png"
-      },
-  ]
+    icon: "Assets/vs.png"
+  },
+];
   
   
 //sorts everything perfectly
@@ -92,10 +111,32 @@ It is used to develop computer programs, as well as websites, web apps, web serv
     `;
   }
 
+function categoryTemplate(card) {
+  return `
+    <card class="nested">
+      <img class="image" src="${card.icon}">
+        <div class="text">
+          <!--<button class="request-button" onclick="getDescription('${card.description}')">Request</button> -->
+          <h3>${card.title}</h3>
+          <p>${card.description}</p>
+          <button class="request-button" onclick="show_items()">Request</button>
+      </div>
+    </card>
+  `;
+}
+
+document.getElementById("category-view").innerHTML = `
+<div class="stack">
+  <main class="grid">
+    ${main_Category_View.map(categoryTemplate).join("")}
+  </main>
+</div>
+`;
 
 let sorted_Office_List = approved_Office_Software.sort(sortByProperty('title'));
 // This allows the http div to use the app class.
 // Sets up the structure of the page and sends our Template Literal to two functions for work.
+function show_items() {
   document.getElementById("app").innerHTML = `
   <div class="stack">
     <main class="grid">
@@ -104,3 +145,4 @@ let sorted_Office_List = approved_Office_Software.sort(sortByProperty('title'));
     </main>
   </div>
   `;
+}
