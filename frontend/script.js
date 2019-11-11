@@ -1,14 +1,14 @@
-
+//--------------------------------------------------CATEGORY OBJECT--------------------------------------------------/
 const main_Category_View = [
   {
     title: "Woodward",
-    description: "Apps build by Woodward specifically for Woodward",
+    description: "Apps build by Woodward to fit the specific needs of all the Woodward members today. ",
     icon: "Assets/woodward.jpg"
   },
   {
     title: "Office",
     description: "General purpose office applications e.g Microsoft Office, Excel, Powerpoint, Visio etc",
-    icon: "Assets/docker1.png"
+    icon: "Assets/ms(1).png"
   },
   {
     title: "Engineering",
@@ -17,7 +17,7 @@ const main_Category_View = [
   }
 ];
 
-
+//--------------------------------------------------OFFICE OBJECT--------------------------------------------------/
 const approved_Office_Software = [
   {
     title: "Microsoft Word",
@@ -32,7 +32,7 @@ and management. It is now maintained by the Cloud Native Computing Foundation.",
   },
 ];
 
-
+//--------------------------------------------------ENGINEERING OBJECT--------------------------------------------------/
 const approved_Engineering_Software = [
   {
     title: "Microsoft Azure",
@@ -42,27 +42,13 @@ const approved_Engineering_Software = [
   },
   {
     title: "Visual Studio Code",
-    description: "Visual Studio Code is a source-code editor developed by Microsoft for Windows, Linux and macOS. It includes support \
-  for debugging, embedded Git control and GitHub, and code refactoring.",
+    description: "Visual Studio Code is a source-code editor developed by Microsoft for Windows, Linux and macOS.",
     icon: "Assets/vscode.png"
   },
   {
     title: "Visual Studio",
-    description: "Microsoft Visual Studio is an integrated development environment from Microsoft. \
-  It is used to develop computer programs, as well as websites, web apps, web services and mobile apps.",
+    description: "Microsoft Visual Studio is an integrated development environment from Microsoft.",
     icon: "Assets/vs.png"
-  },
-  {
-    title: "Microsoft Azure",
-    description: "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing\
-  applications and services through Microsoft-managed data centers.",
-    icon: "Assets/azure.png"
-  },
-  {
-    title: "Microsoft Azure",
-    description: "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing\
-  applications and services through Microsoft-managed data centers.",
-    icon: "Assets/azure.png"
   },
   {
     title: "Microsoft Azure",
@@ -72,7 +58,7 @@ const approved_Engineering_Software = [
   },
 ];
 
-
+//--------------------------------------------------WOODWARD OBJECT--------------------------------------------------/
 const approved_Woodward_Software = [
   {
     title: "SQL Server",
@@ -87,7 +73,7 @@ const approved_Woodward_Software = [
     icon: "Assets/GoTo.png"
   },
 ];
-
+//--------------------------------------------------//--------------------------------------------------/
 
 // Function to read more and restrict text length on each card
   function getDesc(itemDesc){
@@ -136,7 +122,7 @@ function categoryTemplate(card) {
           <div class="text">
             <h3>${card.title}</h3>
             <p>${card.description}</p>
-            <button class="request-button" onclick="show_Woodward_items()">Request</button>
+            <button class="request-button" onclick="show_Woodward_items()">View</button>
         </div>
       </card>
     `;
@@ -148,7 +134,7 @@ function categoryTemplate(card) {
           <div class="text">
             <h3>${card.title}</h3>
             <p>${card.description}</p>
-            <button class="request-button" onclick="show_Office_items()">Request</button>
+            <button class="request-button" onclick="show_Office_items()">View</button>
         </div>
       </card>
     `;
@@ -160,14 +146,14 @@ function categoryTemplate(card) {
           <div class="text">
             <h3>${card.title}</h3>
             <p>${card.description}</p>
-            <button class="request-button" onclick="show_Engineering_items()">Request</button>
+            <button class="request-button" onclick="show_Engineering_items()">View</button>
         </div>
       </card>
     `;
   }
 }
 
-
+//send to categoryTemplate
 document.getElementById("category-view").innerHTML = `
 <div class="stack">
   <main class="grid-category-menu">
@@ -176,6 +162,7 @@ document.getElementById("category-view").innerHTML = `
 </div>
 `;
 
+//--------------------------------------------------//-----------------SORTING OBJECTS-------------------/
 //sorts everything perfectly
 let sortByProperty = function (property) {
   return function (x, y) {
@@ -190,6 +177,7 @@ let sorted_Office_List = approved_Office_Software.sort(sortByProperty('title'));
 let sorted_Enginering_List = approved_Engineering_Software.sort(sortByProperty('title'));
 let sorted_Woodward_List = approved_Woodward_Software.sort(sortByProperty('title'));
 
+//--------------------------------------------------//-----------------SENDING OBJECTS TO TEMPLATE LITERAL FUNCTIONS-------------------/
 
 // This allows the http div to use the app class.
 // Sets up the structure of the page and sends our Template Literal to two functions for work.
