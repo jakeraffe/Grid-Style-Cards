@@ -13,7 +13,7 @@ const main_Category_View = [
   {
     title: "Engineering",
     description: "From Autocad to something else that ill write in later, all your Enginerring Software is found here",
-    icon: "Assets/engineering.jpg"
+    icon: "Assets/engineering(1).png"
   }
 ];
 
@@ -131,7 +131,7 @@ const approved_Woodward_Software = [
 function categoryTemplate(card) {
   if (card.title == "Woodward"){
     return `
-      <card class="nested">
+      <card class="category-menu-nested">
         <img class="image" src="${card.icon}">
           <div class="text">
             <h3>${card.title}</h3>
@@ -143,7 +143,7 @@ function categoryTemplate(card) {
   }
   else if (card.title == "Office"){
     return `
-      <card class="nested">
+      <card class="category-menu-nested">
         <img class="image" src="${card.icon}">
           <div class="text">
             <h3>${card.title}</h3>
@@ -155,7 +155,7 @@ function categoryTemplate(card) {
   }
   else{
     return `
-      <card class="nested">
+      <card class="category-menu-nested">
         <img class="image" src="${card.icon}">
           <div class="text">
             <h3>${card.title}</h3>
@@ -177,7 +177,7 @@ document.getElementById("category-view").innerHTML = `
 `;
 
 //sorts everything perfectly
-var sortByProperty = function (property) {
+let sortByProperty = function (property) {
   return function (x, y) {
       //basically returns nothing if they are equal,
       //or returns the item that is greater than the lesser
