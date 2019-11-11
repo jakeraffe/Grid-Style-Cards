@@ -17,23 +17,24 @@
 
 .grid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    align-items: stretch;
-    object-fit: cover;
-    padding: 1em;
-    gap: 1em;
-}
-
-.grid-category-menu{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    align-items: stretch;
+    grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+    align-items: normal;
     object-fit: cover;
     padding: 1em;
     gap: 1em;
 }
 
 /*------------------------------MENU-CARD STYLING------------------------*/
+.grid-category-menu{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    align-items: stretch;
+    object-fit: cover;
+    padding-top: 2em;
+    padding-left: 8em;
+    padding-right: 8em;
+    gap: 2em;
+}
 
 .category-menu-nested{
     display: grid;
@@ -67,6 +68,15 @@
 }
 .category-menu-nested:hover{
     box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.2);
+}
+.category-menu-nested > .image{
+    max-width: 100%;
+    max-height: 42%;
+    min-width: 0%;
+    min-height: 0%;
+    border: white;
+    grid-auto-rows: 70px;
+    padding-left: 1.3em;
 }
 
 /*--------------------------SUB-CARD STYLING-----------------------------*/
