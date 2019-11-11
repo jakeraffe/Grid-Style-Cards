@@ -30,18 +30,6 @@ in packages or containers. Containers are isolated from one another and bundle t
     description: "Kubernetes is an open-source container-orchestration system for automating application deployment, scaling, \
 and management. It is now maintained by the Cloud Native Computing Foundation.",
     icon: "Assets/kuber2.png"
-  },
-  {
-    title: "SQL Server",
-    description: "Microsoft SQL Server is a relational database management system developed by Microsoft. It is a software \
-product with the primary function of storing and retrieving data as requested by other software applications",
-    icon: "Assets/sql.png"
-  },
-  {
-    title: "Goto Meeting",
-    description: "Microsoft SQL Server is a relational database management system developed by Microsoft. It is a software \
-product with the primary function of storing and retrieving data as requested by other software applications",
-    icon: "Assets/GoTo.png"
   }
 ];
 
@@ -66,8 +54,22 @@ It is used to develop computer programs, as well as websites, web apps, web serv
     icon: "Assets/vs.png"
   },
 ];
-  
-  
+
+
+const approved_Woodward_Software = [
+  {
+    title: "SQL Server",
+    description: "Microsoft SQL Server is a relational database management system developed by Microsoft. It is a software \
+  product with the primary function of storing and retrieving data as requested by other software applications",
+    icon: "Assets/sql.png"
+  },
+  {
+    title: "Goto Meeting",
+    description: "Microsoft SQL Server is a relational database management system developed by Microsoft. It is a software \
+  product with the primary function of storing and retrieving data as requested by other software applications",
+    icon: "Assets/GoTo.png"
+  },
+];
 //sorts everything perfectly
   var sortByProperty = function (property) {
     return function (x, y) {
@@ -119,7 +121,7 @@ function categoryTemplate(card) {
           <!--<button class="request-button" onclick="getDescription('${card.description}')">Request</button> -->
           <h3>${card.title}</h3>
           <p>${card.description}</p>
-          <button class="request-button" onclick="show_items()">Request</button>
+          <button class="request-button" onclick="show_Office_items()">Request</button>
       </div>
     </card>
   `;
@@ -134,14 +136,27 @@ document.getElementById("category-view").innerHTML = `
 `;
 
 let sorted_Office_List = approved_Office_Software.sort(sortByProperty('title'));
+let sorted_Enginering_List = approved_Engineering_Software.sort(sortByProperty('title'));
+let sorted_Woodward_List = approved_Woodward_Software.sort(sortByProperty('title'));
+// let sorted_Office_List = approved_Office_Software.sort(sortByProperty('title'));
+
 // This allows the http div to use the app class.
 // Sets up the structure of the page and sends our Template Literal to two functions for work.
-function show_items() {
+function show_Office_items() {
   document.getElementById("app").innerHTML = `
   <div class="stack">
     <main class="grid">
-      ${sorted_Office_List.map(getDesc).join("")}
       ${sorted_Office_List.map(softTemplate).join("")}
+    </main>
+  </div>
+  `;
+}
+
+function show_Eng_items() {
+  document.getElementById("app").innerHTML = `
+  <div class="stack">
+    <main class="grid">
+      ${sorted_Enginering_List.map(softTemplate).join("")}
     </main>
   </div>
   `;
