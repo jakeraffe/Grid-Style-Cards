@@ -20,12 +20,12 @@ const main_Category_View = [
 
 const approved_Office_Software = [
   {
-    title: "Office Microsoft Word",
+    title: "Microsoft Word",
     description: "Microsoft Word is a word processor developed by Microsoft. It was first released on October 25, 1983 under the name Multi-Tool Word for Xenix systems.",
     icon: "Assets/word.png"
   },
   {
-    title: "Office Kubernetes",
+    title: "Kubernetes",
     description: "Kubernetes is an open-source container-orchestration system for automating application deployment, scaling, \
 and management. It is now maintained by the Cloud Native Computing Foundation.",
     icon: "Assets/kuber2.png"
@@ -35,19 +35,19 @@ and management. It is now maintained by the Cloud Native Computing Foundation.",
 
 const approved_Engineering_Software = [
 {
-  title: "Engineering Microsoft Azure",
+  title: "Microsoft Azure",
   description: "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing\
 applications and services through Microsoft-managed data centers.",
   icon: "Assets/azure.png"
 },
   {
-    title: " Engineering Visual Studio Code",
+    title: "Visual Studio Code",
     description: "Visual Studio Code is a source-code editor developed by Microsoft for Windows, Linux and macOS. It includes support \
 for debugging, embedded Git control and GitHub, and code refactoring.",
     icon: "Assets/vscode.png"
   },
   {
-    title: "Engineering Visual Studio",
+    title: "Visual Studio",
     description: "Microsoft Visual Studio is an integrated development environment from Microsoft. \
 It is used to develop computer programs, as well as websites, web apps, web services and mobile apps.",
     icon: "Assets/vs.png"
@@ -57,13 +57,13 @@ It is used to develop computer programs, as well as websites, web apps, web serv
 
 const approved_Woodward_Software = [
   {
-    title: "Woodward SQL Server",
+    title: "SQL Server",
     description: "Microsoft SQL Server is a relational database management system developed by Microsoft. It is a software \
   product with the primary function of storing and retrieving data as requested by other software applications",
     icon: "Assets/sql.png"
   },
   {
-    title: "Woodward Goto Meeting",
+    title: "Goto Meeting",
     description: "Microsoft SQL Server is a relational database management system developed by Microsoft. It is a software \
   product with the primary function of storing and retrieving data as requested by other software applications",
     icon: "Assets/GoTo.png"
