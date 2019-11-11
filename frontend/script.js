@@ -29,28 +29,46 @@ const approved_Office_Software = [
     description: "Kubernetes is an open-source container-orchestration system for automating application deployment, scaling, \
 and management. It is now maintained by the Cloud Native Computing Foundation.",
     icon: "Assets/kuber2.png"
-  }
+  },
 ];
 
 
 const approved_Engineering_Software = [
-{
-  title: "Microsoft Azure",
-  description: "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing\
-applications and services through Microsoft-managed data centers.",
-  icon: "Assets/azure.png"
-},
+  {
+    title: "Microsoft Azure",
+    description: "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing\
+  applications and services through Microsoft-managed data centers.",
+    icon: "Assets/azure.png"
+  },
   {
     title: "Visual Studio Code",
     description: "Visual Studio Code is a source-code editor developed by Microsoft for Windows, Linux and macOS. It includes support \
-for debugging, embedded Git control and GitHub, and code refactoring.",
+  for debugging, embedded Git control and GitHub, and code refactoring.",
     icon: "Assets/vscode.png"
   },
   {
     title: "Visual Studio",
     description: "Microsoft Visual Studio is an integrated development environment from Microsoft. \
-It is used to develop computer programs, as well as websites, web apps, web services and mobile apps.",
+  It is used to develop computer programs, as well as websites, web apps, web services and mobile apps.",
     icon: "Assets/vs.png"
+  },
+  {
+    title: "Microsoft Azure",
+    description: "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing\
+  applications and services through Microsoft-managed data centers.",
+    icon: "Assets/azure.png"
+  },
+  {
+    title: "Microsoft Azure",
+    description: "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing\
+  applications and services through Microsoft-managed data centers.",
+    icon: "Assets/azure.png"
+  },
+  {
+    title: "Microsoft Azure",
+    description: "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing\
+  applications and services through Microsoft-managed data centers.",
+    icon: "Assets/azure.png"
   },
 ];
 
@@ -86,7 +104,11 @@ const approved_Woodward_Software = [
       // alert(secondHalf);
   }
 
-  
+  function API_Request(){
+    alert("Request for card sent. Thank you.");
+  }
+
+
   // completes the rest of the structure of the cards
   // "item" is the literal object array that has been passed into our function.
   //  This loops through and displays as we ask it to.
@@ -98,7 +120,7 @@ const approved_Woodward_Software = [
             <!--<button class="request-button" onclick="getDescription('${item.description}')">Request</button> -->
             <h3>${item.title}</h3>
             <p>${item.description}</p>
-            <button class="request-button" onclick="getDesc()">Request</button>
+            <button class="request-button" onclick="API_Request()">Request</button>
         </div>
       </card>
     `;
@@ -112,7 +134,6 @@ function categoryTemplate(card) {
       <card class="nested">
         <img class="image" src="${card.icon}">
           <div class="text">
-            <!--<button class="request-button" onclick="getDescription('${card.description}')">Request</button> -->
             <h3>${card.title}</h3>
             <p>${card.description}</p>
             <button class="request-button" onclick="show_Woodward_items()">Request</button>
@@ -125,7 +146,6 @@ function categoryTemplate(card) {
       <card class="nested">
         <img class="image" src="${card.icon}">
           <div class="text">
-            <!--<button class="request-button" onclick="getDescription('${card.description}')">Request</button> -->
             <h3>${card.title}</h3>
             <p>${card.description}</p>
             <button class="request-button" onclick="show_Office_items()">Request</button>
@@ -138,7 +158,6 @@ function categoryTemplate(card) {
       <card class="nested">
         <img class="image" src="${card.icon}">
           <div class="text">
-            <!--<button class="request-button" onclick="getDescription('${card.description}')">Request</button> -->
             <h3>${card.title}</h3>
             <p>${card.description}</p>
             <button class="request-button" onclick="show_Engineering_items()">Request</button>
@@ -151,7 +170,7 @@ function categoryTemplate(card) {
 
 document.getElementById("category-view").innerHTML = `
 <div class="stack">
-  <main class="grid">
+  <main class="grid-category-menu">
     ${main_Category_View.map(categoryTemplate).join("")}
   </main>
 </div>
