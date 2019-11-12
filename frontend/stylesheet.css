@@ -27,12 +27,14 @@
 /*------------------------------MENU-CARD STYLING------------------------*/
 .grid-category-menu{
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 1fr));
-    align-items: stretch;
+    grid-template-columns: repeat(3, 2fr);
+    max-width: 1400px;
+    min-width: 1000px;
+    align-items: normal;
     object-fit: cover;
     padding-top: 2em;
-    padding-left: 8em;
-    padding-right: 8em;
+    padding-left: 5em;
+    padding-right: 5em;
     gap: 2em;
 }
 
