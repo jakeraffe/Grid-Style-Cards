@@ -27,9 +27,9 @@
 /*------------------------------MENU-CARD STYLING------------------------*/
 .grid-category-menu{
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    max-width: 1400px;
-    min-width: 1000px;
+    grid-template-columns: repeat(3, minmax(330px, 1fr));
+    /* max-width: 1400px;
+    min-width: 1000px; */
     align-items: normal;
     object-fit: cover;
     padding-top: 2em;
