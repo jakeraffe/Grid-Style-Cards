@@ -1,9 +1,9 @@
 
 /*------------------------------FONTS--------------------------------*/
-
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap'); /*font-family: 'Montserrat', sans-serif;*/
 @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
 /*---------------------------MAIN PAGE STYLE-------------------------*/
 .main-page{
@@ -15,6 +15,7 @@
     overflow: auto;
 }
 
+/*--------------------------MAIN CARD STYLING-----------------------------*/
 .grid{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
@@ -22,6 +23,39 @@
     object-fit: cover;
     padding: 1em;
     gap: 1em;
+}
+.nested{
+    display: grid;
+    grid-template-columns: repeat(2, 20% 80%);
+    /* grid-template-areas: "sidebar main main"; */
+    grid-template-rows: repeat(3, 130px);
+    border-radius: 6px;
+    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+    background: snow;
+    grid-auto-rows: 80%;
+    border: 1px solid #ccc;
+    margin: .1rem;
+}
+.nested:hover{
+    box-shadow: 0 1px 0px 0px rgba(0,0,0,0.2);
+    border:black;
+}
+.text{
+    padding: 15px 20px 10px 15px;
+}
+.text > h3{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #177FAD;
+    font-size: 20px;
+    /* padding: 10px 10px 10px 15px; */
+    /* border-bottom: 1px solid #dfdfdf; */
+}
+
+.text > p{
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 19px;
 }
 
 /*------------------------------MENU-CARD STYLING------------------------*/
@@ -51,8 +85,8 @@
     margin: .1rem;
 }
 
-.category-menu-nested > .text{
-    padding: 1px 2px 15px 10px;
+.category-menu-nested > .text {
+    padding: 10px 10px 10px 30px;
 }
 
 .category-menu-nested > .text > p{
@@ -65,7 +99,6 @@
     text-decoration: none;
     color: #177FAD;
     font-size: 25px;
-    padding: 10px 10px 10px 15px;
     /* border-bottom: 1px solid #dfdfdf; */
 }
 .category-menu-nested:hover{
@@ -79,41 +112,6 @@
     border: white;
     grid-auto-rows: 70px;
     padding-left: 1.3em;
-}
-
-/*--------------------------SUB-CARD STYLING-----------------------------*/
-.nested{
-    display: grid;
-    grid-template-columns: repeat(3, 17% 77%);
-    /* grid-template-areas: "sidebar main main"; */
-    grid-template-rows: repeat(3, 120px);
-    border-radius: 6px;
-    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
-    background: snow;
-    grid-auto-rows: 80%;
-    border: 1px solid #ccc;
-    margin: .1rem;
-}
-.nested:hover{
-    box-shadow: 0 1px 0px 0px rgba(0,0,0,0.2);
-    border:black;
-}
-.text{
-    padding: 1px 2px 15px 10px;
-}
-.text > h3{
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    color: #177FAD;
-    font-size: 20px;
-    padding: 10px 10px 10px 15px;
-    /* border-bottom: 1px solid #dfdfdf; */
-}
-
-.text > p{
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(0, 0, 0);
-    font-size: 17.8px;
 }
 
 /*-------------------------------BUTTON--------------------------------*/
