@@ -90,8 +90,31 @@ const approved_Woodward_Software = [
       // alert(secondHalf);
   }
 
+  // Blocked by CORS policy. 
+  //Added headers to web.xml but did not solve the issue
   function API_Request(){
-    alert("Request for card sent. Thank you.");
+    var HttpClient = function() {
+      this.get = function(aUrl, aCallback) {
+          var anHttpRequest = new XMLHttpRequest();
+          anHttpRequest.onreadystatechange = function() { 
+          if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+          aCallback(anHttpRequest.responseText);
+          }
+    
+        anHttpRequest.open( "GET", aUrl, true );            
+          anHttpRequest.send( null );
+        }
+      }
+    
+      var theURL = 'http://rms-test/sdpapi/request/133872?OPERATION_NAME=GET_REQUEST&format=json&TECHNICIAN_KEY=68EADF0C-83B0-4AC5-B7B0-787847251F81';
+      var client = new HttpClient();
+      let thisReply = null;
+      client.get(theURL, function(response) {
+      //   var response1 = JSON.parse(response);
+      // alert(response1);
+      //   console.log(response);
+      // document.getElementById('demo').innerHTML = response;
+      });
   }
 
 
