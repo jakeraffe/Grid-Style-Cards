@@ -1,0 +1,14 @@
+ {
+    "approved_Woodward_Software" : [
+        {
+        "title": "SQL Server",
+        "description": "Microsoft SQL Server is a relational database management system developed by Microsoft. It is a software product with the primary function of storing and retrieving data as requested by other software applications",
+        "icon": "Assets/sql.png"
+        },
+        {
+        "title": "Goto Meeting",
+        "description": "Microsoft SQL Server is a relational database management system developed by Microsoft. It is a software product with the primary function of storing and retrieving data as requested by other software applications",
+        "icon": "Assets/GoTo.png"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "approved_Engineering_Software" : [
+        {
+        "title": "Microsoft Azure",
+        "description": "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers.",
+        "icon": "Assets/azure.png"
+        },
+        {
+        "title": "Visual Studio Code",
+        "description": "Visual Studio Code is a source-code editor developed by Microsoft for Windows, Linux and macOS.",
+        "icon": "Assets/vscode.png"
+        },
+        {
+        "title": "Visual Studio",
+        "description": "Microsoft Visual Studio is an integrated development environment from Microsoft.",
+        "icon": "Assets/vs.png"
+        },
+        {
+        "title": "Microsoft Azure",
+        "description": "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers.",
+        "icon": "Assets/azure.png"
+        }
+    ]
+}
