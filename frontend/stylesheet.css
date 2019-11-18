@@ -1,7 +1,11 @@
+
+/*------------------------------FONTS--------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap'); /*font-family: 'Montserrat', sans-serif;*/
 @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
+/*---------------------------MAIN PAGE STYLE-------------------------*/
 .main-page{
      /* background-color: #505050 */
      background-color: #eee;
@@ -11,16 +15,64 @@
     overflow: auto;
 }
 
+/*--------------------------MAIN CARD STYLING-----------------------------*/
 .grid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    align-items: stretch;
+    grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+    align-items: normal;
     object-fit: cover;
     padding: 1em;
     gap: 1em;
 }
-
 .nested{
+    display: grid;
+    grid-template-columns: repeat(2, 20% 80%);
+    /* grid-template-areas: "sidebar main main"; */
+    grid-template-rows: repeat(3, 130px);
+    border-radius: 6px;
+    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+    background: snow;
+    grid-auto-rows: 80%;
+    border: 1px solid #ccc;
+    margin: .1rem;
+}
+.nested:hover{
+    box-shadow: 0 1px 0px 0px rgba(0,0,0,0.2);
+    border:black;
+}
+.text{
+    padding: 15px 20px 10px 15px;
+}
+.text > h3{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #177FAD;
+    font-size: 20px;
+    /* padding: 10px 10px 10px 15px; */
+    /* border-bottom: 1px solid #dfdfdf; */
+}
+
+.text > p{
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 19px;
+}
+
+/*------------------------------MENU-CARD STYLING------------------------*/
+.grid-category-menu{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(330px, 1fr));
+    /* max-width: 1400px;
+    min-width: 1000px; */
+    align-items: normal;
+    object-fit: cover;
+    padding-top: 2em;
+    padding-left: 5em;
+    padding-right: 5em;
+    gap: 2em;
+}
+
+.category-menu-nested{
     display: grid;
     grid-template-columns: repeat(3, 17% 77%);
     /* grid-template-areas: "sidebar main main"; */
@@ -32,26 +84,37 @@
     border: 1px solid #ccc;
     margin: .1rem;
 }
-.nested:hover{
-    box-shadow: 0 1px 0px 0px rgba(0,0,0,0.2);
+
+.category-menu-nested > .text {
+    padding: 10px 10px 10px 30px;
 }
-.text{
-    padding: 1px 2px 15px 15px;
-}
-.text > h3{
+
+.category-menu-nested > .text > p{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 18.8px;
+} 
+.category-menu-nested > .text > h3{
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     color: #177FAD;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 25px;
     /* border-bottom: 1px solid #dfdfdf; */
 }
-
-.text > p{
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
+.category-menu-nested:hover{
+    box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.2);
 }
+.category-menu-nested > .image{
+    max-width: 100%;
+    max-height: 42%;
+    min-width: 0%;
+    min-height: 0%;
+    border: white;
+    grid-auto-rows: 70px;
+    padding-left: 1.3em;
+}
+
+/*-------------------------------BUTTON--------------------------------*/
 
 .request-button{
     background: snow;
@@ -59,6 +122,7 @@
     color: black;
     padding: 10px;
     width: 100px;
+    font-size: 15px;
     /*border-radius: 3px;*/
 }
 
@@ -74,28 +138,7 @@
     top: 2px;
 }
 
-.readmore{
-    background: snow;
-    border-color: black;
-    color: black;
-    padding: 10px;
-    width: 100px;
-    /*border-radius: 3px;*/
-}
-
-.readmore:focus{
-    border-color: rgb(85, 85, 165);
-}
-.readmore:hover{
-    background-color: black;
-    color: white;
-    transition: all .3s ease;
-}
-.readmore:active{
-    top: 2px;
-}
-
-
+/*-----------------------------------IMAGES-------------------------------*/
 .image{
     max-width: 100%;
     max-height: 42%;
@@ -105,4 +148,5 @@
     grid-auto-rows: 70px;
     padding: 1em;
 }
+
 
