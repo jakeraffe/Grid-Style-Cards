@@ -204,6 +204,24 @@ let sortByProperty = function (property) {
   };
 };
 
+// Allows us to read a local JSON file
+// function readJSON(path) {
+//   var xhr = new XMLHttpRequest();
+//   xhr.open('GET', path, true);
+//   xhr.responseType = 'blob';
+//   xhr.onload = function(e) { 
+//     if (this.status == 200) {
+//         var file = new File([this.response], 'temp');
+//         var fileReader = new FileReader();
+//         fileReader.addEventListener('load', function(){
+//              //do stuff with fileReader.result
+//         });
+//         fileReader.readAsText(file);
+//     } 
+//   }
+//   xhr.send();
+// }
+
 //Sorts each list in alphabetical order
 let sorted_Office_List = approved_Office_Software.sort(sortByProperty('title'));
 let sorted_Enginering_List = approved_Engineering_Software.sort(sortByProperty('title'));
