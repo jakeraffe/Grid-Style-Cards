@@ -1,4 +1,6 @@
 //--------------------------------------------------CATEGORY OBJECT--------------------------------------------------/
+//These Objects will eventually be placed in their own JSON files since they will contain hundreds of software 
+// applications.
 const main_Category_View = [
   {
     title: "Woodward",
@@ -17,6 +19,8 @@ const main_Category_View = [
   }
 ];
 
+//These Objects will eventually be placed in their own JSON files since they will contain hundreds of software 
+// applications.
 //--------------------------------------------------OFFICE OBJECT--------------------------------------------------/
 const approved_Office_Software = [
   {
@@ -74,8 +78,10 @@ const approved_Woodward_Software = [
   },
 ];
 //--------------------------------------------------//--------------------------------------------------/
-
+//The objects above will eventually be placed in their own JSON files since they will contain hundreds of software 
+// applications.
 // Function to read more and restrict text length on each card
+
   function getDesc(itemDesc){
     let desc = itemDesc.description;
 
@@ -101,8 +107,11 @@ const approved_Woodward_Software = [
           aCallback(anHttpRequest.responseText);
           }
     
-        anHttpRequest.open( "GET", aUrl, true );            
-          anHttpRequest.send( null );
+        anHttpRequest.open( "GET", aUrl, true );    
+        // anHttpRequest.setRequestHeader("Access-Control-Allow-Header", "*");
+        // setRequestHeader("Origin", 'maximum.blog')
+        // anHttpRequest.setRequestHeader("Origin", "10.30.20.217");            
+        anHttpRequest.send( null );
         }
       }
     
